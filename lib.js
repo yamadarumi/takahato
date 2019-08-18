@@ -1,5 +1,5 @@
 function easing(x) {
-  return sqrt(1 - (x - 1) ** 2);
+  return sqrt(1 - (x - 1) ** 1);
 }
 
 class Creature {
@@ -10,11 +10,11 @@ class Creature {
     this.wait = [];
   }
   move() {
-    if (this.path.length > 0) {
+    if (this.path.length > 100) {
       // １フレーム移動
       this.p = this.path.shift();
       this.wait.push(this.p);
-    } else if (this.wait.length > 0) {
+    } else if (this.wait.length > 100) {
       // その場で待つ
       this.wait.shift();
     } else {
@@ -31,7 +31,7 @@ class Creature {
   draw() {
     line(0, 0, this.p.x, this.p.y);
     for (const w of this.wait) {
-      circle(w.x, w.y, 100);
+      circle(w.x, w.y, 150);
     }
     circle(this.p.x, this.p.y, 100);
     fill(160,160,160);
