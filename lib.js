@@ -10,11 +10,11 @@ class Creature {
     this.wait = [];
   }
   move() {
-    if (this.path.length > 100) {
+    if (this.path.length > 0) {
       // １フレーム移動
       this.p = this.path.shift();
       this.wait.push(this.p);
-    } else if (this.wait.length > 100) {
+    } else if (this.wait.length > 0) {
       // その場で待つ
       this.wait.shift();
     } else {
@@ -29,12 +29,11 @@ class Creature {
     }
   }
   draw() {
-    line(0, 0, this.p.x, this.p.y);
+    line(0, 0, this.x, this.y);
     for (const w of this.wait) {
       circle(w.x, w.y, 150);
     }
-    circle(this.p.x, this.p.y, 100);
-    fill(160,160,160);
+    circle(this.x, this.y, 100);
   }
 }
 
