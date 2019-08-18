@@ -58,9 +58,8 @@ class Plant {
     } else {
       this.size -= 2;
     }
-  }
-  draw() {
-    fill('#56a764');
-    circle(this.p.x, this.p.y, this.size);
+    circle(this.p.x, this.p.y, 100);
+    fill(160,160,160);
   }
 }
+

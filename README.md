@@ -1,5 +1,5 @@
 ## demo
-https://tamura2004.github.io/takahato/
+https://yamadarumi.github.io/takahato/
 
 ## グループ進捗確認ツール
 https://tamura2004.github.io/checkit/
