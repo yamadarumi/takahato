@@ -29,11 +29,11 @@ class Creature {
     }
   }
   draw() {
-    line(0, 0, this.x, this.y);
+    line(0, 0, mouseX, mouseY);
     for (const w of this.wait) {
       circle(w.x, w.y, 150);
     }
-    circle(this.x, this.y, 100);
+    circle(mouseX, mouseY, 100);
   }
 }
 
