@@ -1,7 +1,7 @@
 // タカハトゲームのシミュレータ
-const STEP = 30;
-const R = 50;
-const MAX_WAIT = 30;
+const STEP = 65;
+const R = 100;
+const MAX_WAIT = 150;
 
 let creature;
 
@@ -11,7 +11,7 @@ function setup() {
 }
 
 function draw() {
-  background(255);
+  background(200,90,150);
   creature.move();
   creature.draw();
 }
